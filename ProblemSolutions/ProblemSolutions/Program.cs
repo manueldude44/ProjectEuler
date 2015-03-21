@@ -14,7 +14,10 @@ namespace ProblemSolutions
             {
                 new Problem1(),
                 new Problem2(),
-                new Problem3()
+                new Problem3(),
+                new Problem4(),
+                new Problem5(),
+                new Problem6()
             };
 
             foreach (var problem in problems)
