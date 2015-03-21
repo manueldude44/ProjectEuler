@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ProblemSolutions
 {
-    public class BasicOutLog
+    public abstract class BasicOutLog
     {
-        public string ProblemNumber { get; set; }
-        public string Answer { get; set; }
+        public abstract string ProblemNumber { get; }
+        public abstract string Answer { get; set; }
 
         public void PrintAnswer()
         {

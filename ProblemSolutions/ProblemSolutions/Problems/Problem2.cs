@@ -1,29 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ProblemSolutions.Problems
 {
-    public class Problem1 : BasicOutLog, IAnswer
+    public class Problem2 : BasicOutLog, IAnswer
     {
         public override string ProblemNumber
         {
-            get { return "Problem 1"; }
+            get { return "Problem 2"; }
         }
 
         public override string Answer { get; set; }
-        
+
         public void Solve()
         {
-            long answer = 0;
-            for (int i = 1; i <= 1000; i++)
+            var a = 0;
+            var b = 1;
+            var c = 0;
+            var answer = 0;
+            while (c <= 4000000 )
             {
-                if (i%3 == 0 || i%5 == 0) answer += i;
+                if (c%2 == 0) answer += c;
+                c = a + b;
+                a = b;
+                b = c;
             }
-
             Answer = answer.ToString();
             PrintAnswer();
         }
