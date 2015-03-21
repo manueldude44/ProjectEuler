@@ -13,12 +13,20 @@ namespace ProblemSolutions
             var problems = new List<IAnswer>
             {
                 new Problem1(),
-                new Problem2()
+                new Problem2(),
+                new Problem3()
             };
 
             foreach (var problem in problems)
             {
-                problem.Solve();
+                try
+                {
+                    problem.Solve();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Error Occured. " + e.Message);
+                }
             }
 
             Console.WriteLine();
